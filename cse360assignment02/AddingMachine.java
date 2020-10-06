@@ -1,4 +1,4 @@
-//package cse360assignment02;
+package cse360assignment02;
 
 /**
 * 360 Assignment 01 java example class Adding Machine
@@ -10,6 +10,7 @@
 public class AddingMachine {
 
   private int total; // int to track total
+  private String history = "";
   
   /**
    * Adding machine contrsuctor initializes total to 0
@@ -17,7 +18,9 @@ public class AddingMachine {
    * @return none
    */
   public AddingMachine () {
-    total = 0;  // not needed - included for clarity
+
+	total = 0;  // not needed - included for clarity
+	history = "0";
   }
   
   /**
@@ -26,15 +29,19 @@ public class AddingMachine {
    * @return total
    */
   public int getTotal () {
-    return 0;
+
+    return total;
   }
   
   /**
-   * Add method adds param to total
+   * Add method adds param to total and updates history
    * @param value some integer
    * @return none
    */
   public void add (int value) {
+
+	total += value;
+	history = history + " + " + value;
   }
 
   /**
@@ -43,22 +50,31 @@ public class AddingMachine {
    * @return none
    */
   public void subtract (int value) {
+
+	total -= value;
+	history = history + " - " + value;
   }
 
   /**
-   * To string method prinotus out total
+   * To string method prinotus out history
    * @param none
    * @return none
    */
-  public String toString () {
-    return "";
+  public String toString() {
+
+	return history;
   }
 
   /**
-   * Clear method resets total
+   * Clear method resets history
    * @param none
    * @return none
    */
   public void clear() {
+
+	history = "0";
   }
+
+  public static void main(String[]  args){}
+
 }
