@@ -11,6 +11,7 @@ package cse360assignment02;
 public class AddingMachine {
 
   private int total; // int to track total
+  private String history = "";
   
   /**
    * Adding machine contrsuctor initializes total to 0
@@ -20,6 +21,7 @@ public class AddingMachine {
   public AddingMachine () {
 
 	total = 0;  // not needed - included for clarity
+	history = "0";
   }
   
   /**
@@ -29,7 +31,7 @@ public class AddingMachine {
    */
   public int getTotal () {
 
-    return 0;
+    return total;
   }
   
   /**
@@ -39,6 +41,8 @@ public class AddingMachine {
    */
   public void add (int value) {
 
+	total += value;
+	history = history + " + " + value;
   }
 
   /**
@@ -48,6 +52,8 @@ public class AddingMachine {
    */
   public void subtract (int value) {
 
+	total -= value;
+	history = history + " - " + value;
   }
 
   /**
@@ -57,7 +63,7 @@ public class AddingMachine {
    */
   public String toString() {
 
-	return "";
+	return history;
   }
 
   /**
@@ -67,6 +73,7 @@ public class AddingMachine {
    */
   public void clear() {
 
+	history = "0";
   }
 
 }
