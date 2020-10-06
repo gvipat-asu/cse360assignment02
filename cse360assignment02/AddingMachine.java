@@ -2,6 +2,7 @@ package cse360assignment02;
 
 /**
 * 360 Assignment 01 java example class Adding Machine
+* Repo link: https://github.com/gvipat-asu/cse360assignment02
 *
 * @author  Gaurav Vipat
 * @version 1.0
@@ -10,7 +11,6 @@ package cse360assignment02;
 public class AddingMachine {
 
   private int total; // int to track total
-  private String history = "";
   
   /**
    * Adding machine contrsuctor initializes total to 0
@@ -20,7 +20,6 @@ public class AddingMachine {
   public AddingMachine () {
 
 	total = 0;  // not needed - included for clarity
-	history = "0";
   }
   
   /**
@@ -30,7 +29,7 @@ public class AddingMachine {
    */
   public int getTotal () {
 
-    return total;
+    return 0;
   }
   
   /**
@@ -40,8 +39,6 @@ public class AddingMachine {
    */
   public void add (int value) {
 
-	total += value;
-	history = history + " + " + value;
   }
 
   /**
@@ -51,8 +48,6 @@ public class AddingMachine {
    */
   public void subtract (int value) {
 
-	total -= value;
-	history = history + " - " + value;
   }
 
   /**
@@ -62,7 +57,7 @@ public class AddingMachine {
    */
   public String toString() {
 
-	return history;
+	return "";
   }
 
   /**
@@ -72,9 +67,6 @@ public class AddingMachine {
    */
   public void clear() {
 
-	history = "0";
   }
-
-  public static void main(String[]  args){}
 
 }
